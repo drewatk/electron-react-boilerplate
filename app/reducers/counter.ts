@@ -1,4 +1,3 @@
-// @flow
 import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../actions/counter';
 import type { Action } from './types';
 

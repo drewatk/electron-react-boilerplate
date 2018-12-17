@@ -22,12 +22,13 @@ module.exports = api => {
     presets: [
       [
         require('@babel/preset-env'),
+
         {
           targets: { electron: require('electron/package.json').version },
           useBuiltIns: 'usage'
         }
       ],
-      require('@babel/preset-flow'),
+      require('@babel/preset-typescript'),
       [require('@babel/preset-react'), { development }]
     ],
     plugins: [
@@ -54,6 +55,7 @@ module.exports = api => {
       require('@babel/plugin-proposal-export-namespace-from'),
       require('@babel/plugin-proposal-numeric-separator'),
       require('@babel/plugin-proposal-throw-expressions'),
+      require('@babel/plugin-proposal-object-rest-spread'),
 
       // Stage 3
       require('@babel/plugin-syntax-dynamic-import'),
